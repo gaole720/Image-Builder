@@ -70,6 +70,9 @@ jobs:
         # Organize files
         sudo mkdir -p /tmp/bin_firmware
         sudo find bin -type f -exec sudo cp {} /tmp/bin_firmware/ \;
+        echo "----------------------------查看编译结果---------------------------------"
+        ll /tmp/bin_firmware/
+        
 
     - name: Upload firmware
       uses: actions/upload-artifact@v4
